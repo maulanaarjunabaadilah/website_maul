@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maulana | Web Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <nav>
+        <div class="logo">Maulana.dev</div>
+        <ul class="nav-links">
+            <li><a onclick="showPage('home')" id="nav-home" class="active">Beranda</a></li>
+            <li><a onclick="showPage('about')" id="nav-about">Tentang</a></li>
+            <li><a onclick="showPage('login')" id="nav-login">Login</a></li>
+        </ul>
+        <a onclick="showPage('register')" class="nav-btn">Daftar</a>
+    </nav>
+
+    <div class="main-container">
+
+        <div id="page-home" class="section-content">
+            <h1>Halo, Dunia! 🚀</h1>
+            <p>Selamat datang di website profesional saya.</p>
+            <button class="btn" onclick="showPage('login')">Mulai Sekarang</button>
+        </div>
+
+        <div id="page-about" class="section-content hidden">
+            <h2>Tentang Saya 👨‍💻</h2>
+            <p>Pelajar teknik komputer jaringan yang sedang mendalami pengembangan web.</p>
+            <button class="btn" onclick="showPage('home')">Kembali ke Beranda</button>
+        </div>
+
+        <div id="page-login" class="section-content hidden">
+            <h2>Masuk Akun 🔐</h2>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" id="login-email" placeholder="nama@email.com">
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+            <button class="btn" onclick="handleLogin()">Login</button>
+            <p class="toggle-text">Belum punya akun? <a onclick="showPage('register')">Daftar di sini</a></p>
+        </div>
+
+        <div id="page-register" class="section-content hidden">
+            <h2>Buat Akun ✨</h2>
+            <div class="input-group">
+                <label>Nama Lengkap</label>
+                <input type="text" placeholder="Nama Kamu">
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="nama@email.com">
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+            <button class="btn" onclick="alert('Akun Berhasil Dibuat!')">Daftar</button>
+            <p class="toggle-text">Sudah punya akun? <a onclick="showPage('login')">Login di sini</a></p>
+        </div>
+
+        <div id="page-dashboard" class="section-content hidden">
+            <h2>Selamat Datang! 🎉</h2>
+            <p>Kamu berhasil masuk ke Menu Utama (Dashboard). Di sini adalah halaman rahasia khusus pengguna yang sudah login.</p>
+            <button class="btn" style="background: linear-gradient(90deg, #ff416c, #ff4b2b);" onclick="showPage('home')">Keluar (Logout)</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
